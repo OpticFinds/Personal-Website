@@ -8,6 +8,94 @@
   left: 0;
 }
 
+/*fonts*/
+$code: "Inconsolata";
+$text: "Montserrat";
+/*colors*/
+$navbar: rgba(36, 45, 57, 0.5);
+$dark-gray: rgb(36, 45, 57);
+$yellow: #f6e4ad;
+  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+.container {
+  width: 40%; /* Decrease the width as needed */
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.54);
+  border-radius: 25px;
+  position: fixed;
+  top: 0;
+  left: 20%; /* Move the container to the center horizontally */
+  transform: translateX(-50%); /* Adjust to keep it centered */
+}
+
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  padding: 0px;
+}
+
+nav {
+  float: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 50px;
+  padding-top: 10px;
+  position: relative;
+}
+
+nav a {
+  color: #f4f4f4;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #328f4f;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #328f4f;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+  
 .main-content {
   padding: 5% 5%;
 }
