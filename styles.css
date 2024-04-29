@@ -8,7 +8,7 @@
   left: 0;
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
+#modal1 .carousel-control-prev, #modal1 .carousel-control-next {
   color: black;
 }
 
