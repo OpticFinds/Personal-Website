@@ -12,10 +12,6 @@
   padding: 5% 5%;
 }
 
-.visually-hidden {
-  color: black;
-}
-
 .header {
   display: flex;
 }
