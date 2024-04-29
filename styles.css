@@ -8,6 +8,10 @@
   left: 0;
 }
 
+.carousel-control-prev, .carousel-control-next {
+  color: black;
+}
+
 .main-content {
   padding: 5% 5%;
 }
