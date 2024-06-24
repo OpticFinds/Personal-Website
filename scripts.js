@@ -1,4 +1,4 @@
-document.getElementById('searchInput').addEventListener('keyup', function() {
+document.getElementById('searchInput').addEventListener('keyup', debounce(function() {
     let filter = this.value.toLowerCase().trim(); // Trim whitespace for accurate comparison
     let productCards = document.getElementsByClassName('product-card');
     let noResultsMessage = document.querySelector('.no-results-message');
@@ -21,7 +21,15 @@ document.getElementById('searchInput').addEventListener('keyup', function() {
     } else {
         noResultsMessage.style.display = 'block';
     }
-});
+}, 300));
+
+function debounce(func, wait) {
+    let timeout;
+    return function(...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}
 
 function toggleDescription(button) {
     let description = button.previousElementSibling;
