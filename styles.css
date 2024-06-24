@@ -137,16 +137,15 @@ main {
     color: #000;
 }
 
+/* Styling for No Results Message */
 .no-results-message {
-    text-align: center;
-    font-size: 1.2em;
-    color: #555;
-    margin-top: 20px;
-    background-color: #fff; /* White background */
-    border: 1px solid #ddd; /* Border similar to product cards */
+    background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 10px 20px; /* Padding adjusted for better fit */
-    max-width: calc(100% - 40px); /* Set max-width to allow for responsiveness */
-    margin-left: auto;
-    margin-right: auto;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px auto; /* Center the message and provide margin */
+    color: #333; /* Adjusted text color */
 }
