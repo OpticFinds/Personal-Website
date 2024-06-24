@@ -1,170 +1,178 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #343a40; /* Darker background color */
-    color: #fff; /* Default text color for the entire page */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #343a40; /* Darker background color */
+  color: #fff; /* Default text color for the entire page */
 }
 
 header {
-    background-color: #212629; /* Darker header background color */
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between; /* Align items to the edges */
-    align-items: center; /* Center items vertically */
+  background-color: #212629; /* Darker header background color */
+  color: #fff;
+  padding: 20px;
+  display: flex; /* Set header to use flexbox */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Distribute space between elements */
 }
 
-.header-content {
-    display: flex;
-    align-items: center;
-    flex: 1; /* Allow header content to take all available space */
+.header-content {  
+  flex: 0 0 auto; /* Remove flex grow and set fixed width */
+  display: flex; /* Make header content a flexbox container */
+  align-items: center; /* Align content within header content vertically */
 }
 
 .header-content h1 {
-    margin: 0;
-    font-size: 1.5rem; /* Adjusted font size for the title */
+  margin: 0;
+  font-size: 1.5rem; /* Adjusted font size for the title */
 }
 
 .logo {
-    max-width: 50px; /* Limit maximum width of the logo */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px;
+  max-width: 50px; /* Limit maximum width of the logo */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px;
 }
 
 .logo img {
-    max-width: 100%; /* Ensure the logo fits within the container */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px;
+  max-width: 100%; /* Ensure the logo fits within the container */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px;
 }
 
-header input {
-    width: 50%;
-    padding: 10px;
-    font-size: 16px;
-    background-color: #fff; /* Input background color */
-    color: #000; /* Input text color */
-    border: none;
-    border-radius: 5px;
+.search {
+  width: 50%; /* Adjust width as needed */
+  padding: 10px;
+  font-size: 16px;
+  background-color: #fff; /* Input background color */
+  color: #000; /* Input text color */
+  border: none;
+  border-radius: 5px;
+  text-align: center; /* Center align text */
 }
 
 .social-icons {
-    display: flex;
-    align-items: center;
-    margin-right: 15px; /* Adjust spacing between logo and search bar */
+  display: flex;
+  align-items: center;
+  margin-right: 15px; /* Adjust spacing between logo and search bar */
 }
 
 .social-icons img {
-    max-width: 30px; /* Adjust maximum width of social icons */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 15px; /* Adjust spacing between social icons */
+  max-width: 30px; /* Adjust maximum width of social icons */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 15px; /* Adjust spacing between social icons */
 }
 
 main {
-    padding: 20px;
+  padding: 20px;
 }
 
 .product-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 .product-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    color: #333; /* Adjusted text color for product cards */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 18px 20px 20px; /* Adjusted padding */
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px; /* Added margin between product cards */
+  flex: 0 0 auto;
 }
 
 .product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .product-card img {
-    max-width: 100%;
-    border-radius: 5px;
+  max-width: 100%;
+  border-radius: 5px;
 }
 
 .product-card h2 {
-    font-size: 1.5em;
-    margin: 10px 0;
+  font-size: 1.5em;
+  margin-bottom: 2px;
 }
 
 .product-card .ratings-reviews {
-    font-size: 0.9em;
-    color: #555;
-    margin-top: 5px;
-    display: flex;
-    justify-content: center;
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
 }
 
 .product-card .rating-text {
-    display: inline-block;
-    margin-right: 10px;
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 2px;
 }
 
 .product-card .rating-number {
-    color: #f39c12;
+  color: #f39c12;
 }
 
 .product-card .reviews-text {
-    color: #000;
+  color: #000;
+  margin-top: 2px;
 }
 
 .product-card .description {
-    font-size: 1em;
-    color: #555;
-    margin: 10px 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-height: 3em;
-    transition: max-height 0.3s ease;
+  font-size: 1em;
+  color: #555;
+  margin: 10px 0;
+  margin-top: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 3em;
+  transition: max-height 0.3s ease;
 }
 
 .product-card .description.expanded {
-    max-height: 100%;
+  max-height: 100%;
 }
 
 .product-card .toggle-description {
-    display: block;
-    margin: 10px auto;
-    cursor: pointer;
-    color: #007bff;
-    background: none;
-    border: none;
-    padding: 0;
-    font-size: 0.9em;
+  display: block;
+  margin: 10px auto;
+  margin-bottom: 2px;
+  cursor: pointer;
+  color: #007bff;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.9em;
 }
 
 .product-card a {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
-    background-color: #ff9900;
-    color: #000;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 2px;
+  background-color: #ff9900;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .product-card a:hover {
-    background-color: #e68a00;
-    color: #000;
+  background-color: #e68a00;
+  color: #000;
 }
 
 .product-card .price {
-    font-size: 1.2em;
-    color: #f39c12; /* Adjust color as needed */
-    margin-bottom: 10px; /* Adjust spacing */
+  font-size: 1.4em;
+  color: #f39c12;
+  margin-bottom: 2px;
+  margin-top: 2px;
 }
 
 /* Styling for No Results Message */
@@ -187,3 +195,54 @@ footer {
             text-align: center;
             margin-top: auto; /* Push footer to the bottom of the page */
         }
+
+@media only screen and (max-width: 768px) {
+
+  /* Header Styles */
+  header {
+    flex-direction: row; /* Keep elements horizontal for mobile */
+    justify-content: space-between; /* Distribute space evenly */
+    align-items: center; /* Center elements vertically */
+  }
+
+  .header-content {
+    display: flex; /* Make header content a flexbox container */
+    align-items: center; /* Align content within header content vertically */
+  }
+
+  .social-icons {
+    display: flex; /* Show social icons on mobile */
+  }
+
+  .search {
+    width: 100%;  /* Adjust width to 100% for mobile */
+    margin-top: 10px;  /* Add spacing between logo/title and search */
+    order: 2;
+  }
+
+  /* Move social icons to the left */
+  .header-content {
+    order: 1; /* Move header content (logo & title) after social icons */
+  }
+
+  .social-icons {
+    display: flex; /* Ensure flexbox container */
+    order: 3;
+    justify-content: flex-end; /* Align social icons to the right */
+  }
+
+  .social-icons img { /* Target social icon images directly */
+    max-width: 30px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    justify-content: flex-end;
+  }
+
+  .logo {
+    max-width: 25px; /* Adjust as needed for mobile */
+  }
+
+  .header-content h1 {
+    font-size: 1rem; /* Adjust as needed for mobile */
+    margin-right: 5px;
+  }
+}
