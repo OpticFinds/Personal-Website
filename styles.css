@@ -4,6 +4,9 @@ body {
   padding: 0;
   background-color: #343a40; /* Darker background color */
   color: #fff; /* Default text color for the entire page */
+  min-height: 100vh; /* Set minimum body height for full viewport height */
+  display: flex; /* Make body a flex container */
+  flex-direction: column; /* Stack elements vertically */
 }
 
 header {
@@ -63,6 +66,7 @@ header {
 
 main {
   padding: 20px;
+  flex: 1;
 }
 
 .product-list {
@@ -189,6 +193,11 @@ main {
 }
 
 footer {
+	    display: flex; /* Make footer a flex container */
+  	    justify-content: center; /* Center copyright text horizontally */
+ 	    align-items: center; /* Center copyright text vertically */
+ 	    padding: 10px; /* Add spacing to copyright text */
+ 	    background-color: #eee;
             background-color: #343a40; 
             color: #fff;
             padding: 10px 20px;
