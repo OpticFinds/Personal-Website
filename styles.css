@@ -80,6 +80,12 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     color: #333; /* Adjusted text color for product cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .product-card img {
@@ -155,6 +161,12 @@ main {
     color: #000;
 }
 
+.product-card .price {
+    font-size: 1.2em;
+    color: #f39c12; /* Adjust color as needed */
+    margin-bottom: 10px; /* Adjust spacing */
+}
+
 /* Styling for No Results Message */
 .no-results-message {
     background-color: #fff;
@@ -167,3 +179,11 @@ main {
     margin: 20px auto; /* Center the message and provide margin */
     color: #333; /* Adjusted text color */
 }
+
+footer {
+            background-color: #343a40; 
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            margin-top: auto; /* Push footer to the bottom of the page */
+        }
