@@ -32,14 +32,13 @@ function debounce(func, wait) {
 }
 
 function toggleDescription(button) {
-    let description = button.previousElementSibling;
-    if (description.classList.contains('expanded')) {
-        description.classList.remove('expanded');
-        button.textContent = 'More';
-    } else {
-        description.classList.add('expanded');
-        button.textContent = 'Less';
-    }
+  let description = button.closest('.product-card').querySelector('.description');
+  if (description.classList.contains('expanded')) {
+    description.classList.remove('expanded');
+  } else {
+    description.classList.add('expanded');
+  }
+  // We don't modify the display property of the product card here.
 }
 
 document.addEventListener('DOMContentLoaded', function() {
