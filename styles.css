@@ -26,6 +26,8 @@ header {
 
 .logo {
     margin-right: 20px; /* Adjust spacing between logo and title */
+    max-width: 120px; /* Limit maximum width of the logo */
+    max-height: 40px; /* Limit maximum height of the logo */
 }
 
 .logo img {
