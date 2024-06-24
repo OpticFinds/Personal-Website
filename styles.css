@@ -18,21 +18,22 @@ header {
 .header-content {
     display: flex;
     align-items: center;
+    flex: 1; /* Allow header content to take all available space */
 }
 
 .header-content h1 {
     margin: 0;
+    font-size: 1.5rem; /* Adjusted font size for the title */
 }
 
 .logo {
-    margin-right: 20px; /* Adjust spacing between logo and title */
-    max-width: 120px; /* Limit maximum width of the logo */
-    max-height: 40px; /* Limit maximum height of the logo */
+    max-width: 50px; /* Limit maximum width of the logo */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .logo img {
     max-width: 100%; /* Ensure the logo fits within the container */
-    max-height: 100%; /* Ensure the logo fits within the container */
+    height: auto; /* Maintain aspect ratio */
 }
 
 header input {
@@ -48,13 +49,13 @@ header input {
 .social-icons {
     display: flex;
     align-items: center;
-    margin-left: auto; /* Push social icons to the right */
+    margin-left: 20px; /* Adjust spacing between logo and search bar */
 }
 
 .social-icons img {
     max-width: 30px; /* Adjust maximum width of social icons */
-    max-height: 30px; /* Adjust maximum height of social icons */
-    margin-right: 15px;
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 10px; /* Adjust spacing between social icons */
 }
 
 main {
