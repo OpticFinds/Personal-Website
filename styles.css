@@ -29,7 +29,8 @@ header {
 }
 
 .logo img {
-    max-width: 100px; /* Adjust maximum width of the logo */
+    max-width: 100%; /* Ensure the logo fits within the container */
+    max-height: 100%; /* Ensure the logo fits within the container */
 }
 
 header input {
