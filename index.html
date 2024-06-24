@@ -8,38 +8,62 @@
 </head>
 <body>
     <header>
-        <h1>Amazon Affiliate Products</h1>
+        <div class="header-content">
+            <div class="logo">
+                <img src="your-logo.png" alt="Logo">
+            </div>
+            <h1>Brand Name</h1>
+        </div>
         <input type="text" id="searchInput" placeholder="Search products...">
     </header>
     <main>
         <div class="product-list">
             <!-- Example Product Card -->
-            <div class="product-card" data-keywords="electronics, mobile">
+            <div class="product-card" data-rating="4.5" data-reviews="123456" data-keywords="electronics, mobile, Go2, Go 2">
                 <img src="product1.jpg" alt="Product Image">
-                <h2>Product Title 1</h2>
-                <p class="description">
-                    This is a description of the product. It has great features. This is a description of the product. It has great features.
-                </p>
-                <button class="toggle-description" onclick="toggleDescription(this)">Read more</button>
-                <div class="rating">
-                    <div class="stars" data-rating="4"></div>
-                    <span>4.0</span>
-                </div>
-                <a href="https://www.amazon.com/dp/exampleproduct1" target="_blank">Buy on Amazon</a>
-            </div>
-            <!-- Copy and paste the below template for new products -->
-            <div class="product-card" data-keywords="keyword1, keyword2">
-                <img src="product_image_url" alt="Product Image">
                 <h2>Product Title</h2>
-                <p class="description">Product description goes here.</p>
-                <button class="toggle-description" onclick="toggleDescription(this)">Read more</button>
-                <div class="rating">
-                    <div class="stars" data-rating="X"></div>
-                    <span>X.X</span>
+                <p class="description">
+                    This is a description of the product. It has great features. 
+                </p>
+                <button class="toggle-description" onclick="toggleDescription(this)">More</button>
+                <div class="ratings-reviews">
+                    <p class="rating-text">
+                        Rating: ⭐ <span class="rating-number">4.5</span>/5
+                    </p>
+                    <p class="reviews-text">
+                        Reviews: 💬 <span class="reviews-number">123,456</span>
+                    </p>
                 </div>
-                <a href="https://www.amazon.com/dp/product_link" target="_blank">Buy on Amazon</a>
+                <div class="button-wrapper">
+                    <a href="https://www.amazon.com/dp/exampleproduct1" target="_blank">Buy on Amazon</a>
+                </div>
+            </div>
+          
+            <!-- Next product -->
+<div class="product-card" data-rating="4.5" data-reviews="123456" data-keywords="action camera, Insta360 GO3, mini camera, lightweight camera, wearable camera, tiny camera, vlogging camera, 360 camera, sports camera, pocket camera, small action cam, travel camera, Insta360 GO3 review, Insta360 GO3 specs, best mini camera 2024, buy Insta360 GO3, compact action camera, Insta360 GO3 features, Insta360 GO3 price, waterproof mini camera, Go 3">
+                <img src="https://m.media-amazon.com/images/I/61lsfI-bJ2L._AC_SL1500_.jpg" alt="Insta360 GO3 Standard Kit">
+                <h2>Insta360 GO3 Standard</h2>
+                <p class="description">
+                  
+The Insta360 GO3 is a compact action camera, weighing just 35g. It shoots in 2.7K resolution, perfect for hands-free POV videos and creative angles. Its magnetic design and accessories like the Magnet Pendant and Easy Clip offer versatile mounting options. The Action Pod provides 170 minutes of battery life, a flip touchscreen, and remote control. It features FlowState Stabilization for smooth footage and is waterproof up to 5m (16ft). AI-powered editing makes creating highlights and reels effortless. 
+                </p>
+                <button class="toggle-description" onclick="toggleDescription(this)">More</button>
+                <div class="ratings-reviews">
+                    <p class="rating-text">
+                        Rating: ⭐ <span class="rating-number">4.3</span>/5
+                    </p>
+                    <p class="reviews-text">
+                        Reviews: 💬 <span class="reviews-number">658</span>
+                    </p>
+                </div>
+                <div class="button-wrapper">
+                    <a href="https://www.amazon.com/Insta360-64GB-Lightweight-Stabilization-Multifunctional/dp/B0C3V27L6V/?_encoding=UTF8&pd_rd_w=Cl9zi&content-id=amzn1.sym.e92d427b-6681-44e4-9201-8463289b9c75%3Aamzn1.symc.f3a6ae52-fb92-4bbd-ba18-628777ebc1c0&pf_rd_p=e92d427b-6681-44e4-9201-8463289b9c75&pf_rd_r=4KVQ4H6AEA6R9MH91RW8&pd_rd_wg=qwUve&pd_rd_r=a9b5de3d-fe6c-496f-a09e-f733dca25645&ref_=pd_hp_d_atf_ci_mcx_mr_ca_hp_atf_d&th=1" target="_blank">Buy on Amazon</a>
+                </div>
             </div>
             <!-- End of template -->
+        </div>
+        <div class="no-results-message" style="display: none;">
+            No products found. ☹️
         </div>
     </main>
     <script src="scripts.js"></script>
