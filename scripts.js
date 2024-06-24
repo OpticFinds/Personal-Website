@@ -1,5 +1,5 @@
 document.getElementById('searchInput').addEventListener('keyup', function() {
-    let filter = this.value.toLowerCase();
+    let filter = this.value.toLowerCase().trim(); // Trim whitespace for accurate comparison
     let productCards = document.getElementsByClassName('product-card');
     let noResultsMessage = document.querySelector('.no-results-message');
 
@@ -16,10 +16,10 @@ document.getElementById('searchInput').addEventListener('keyup', function() {
         }
     });
 
-    if (!foundResults) {
-        noResultsMessage.style.display = 'block';
-    } else {
+    if (foundResults) {
         noResultsMessage.style.display = 'none';
+    } else {
+        noResultsMessage.style.display = 'block';
     }
 });
 
